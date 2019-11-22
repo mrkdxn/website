@@ -1,0 +1,16 @@
+
+
+.photo {
+    width: 200px;
+    height: 200px;
+    float: left;
+    position: relative;
+    margin: 20px;
+    color: #fff;
+}
+.photo h2 {
+    background-color: #000;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: -10px;
+}
