@@ -7,6 +7,11 @@
     position: relative;
     margin: 20px;
     color: #fff;
+    background-size: cover !important;
+}
+.featured {
+    width: 400px;
+    height: 400px;
 }
 .photo h2 {
     background-color: #000;
