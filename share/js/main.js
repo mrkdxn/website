@@ -3,7 +3,12 @@ console.log('test');
 let config =
     [
         {
-            "title" : "Spring & Summer & Fall 2019",
+            "title" : "Winter 2019/20",
+            "img" : "https://live.staticflickr.com/65535/49336778773_ea618b9ae2_h.jpg",
+            "link" : "https://www.flickr.com/gp/80995589@N00/0MP7T3"
+        },
+        {
+            "title" : "Spring to Fall 2019",
             "img" : "https://live.staticflickr.com/65535/49051229366_8bff85501e.jpg",
             "link" : "https://www.flickr.com/gp/80995589@N00/0MP7T3"
         },

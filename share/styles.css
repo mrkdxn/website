@@ -1,5 +1,7 @@
 
-
+body {
+    text-align: center;
+}
 .photo {
     width: 200px;
     height: 200px;
@@ -9,10 +11,6 @@
     color: #fff;
     background-size: cover !important;
 }
-.featured {
-    width: 400px;
-    height: 400px;
-}
 .photo h2 {
     background-color: #000;
     padding: 10px;
@@ -21,20 +19,8 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .photo
-    {
-        width: 35%;
-    }
-    .featured
-    {
-        width: 80%;
-    }
-    p
-    {
-        padding: 10px;
-    }
-
-    h1, p {
-        text-align: center;
-    }
+   .photo {
+       width: 80%;
+       height: auto;
+   }
 }
