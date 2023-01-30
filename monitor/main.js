@@ -1,7 +1,10 @@
 
+
+
 window.addEventListener('load', function () {
     let hydroMonitor = new Monitor();
     hydroMonitor.init();
+
 });
 
 const Monitor = function () {
@@ -12,13 +15,23 @@ Monitor.prototype = {
     location : '',
     token : '',
     account : '',
-    lieu : '',
+    phone : '',
 
     init: function()
     {
-        console.log('init............');
+       this
         this.getParams();
-        this.getHyroAPI();
+    
+        if(this.validateDigits(this.location, 10) != false)
+        {
+            this.statusMessage("Connecting to API...", "green");
+            this.getHyroAPI();
+        }
+        else
+        {
+            this.statusMessage('Error: No Location found in URL. Unable to check address.', 'red');
+        }
+        
     },
     getParams: function()
     {
@@ -27,7 +40,30 @@ Monitor.prototype = {
         this.location = url.searchParams.get("location");
         this.token = url.searchParams.get("token");
         this.account = url.searchParams.get("account");
+        this.phone = url.searchParams.get("phone");
        
+    },
+    validateDigits: function(data, num)
+    {
+        var results = /^\d+$/.test(data);
+        if (results == false || data.length != num)
+        {
+            console.log("not valid!");
+            return false;
+        }
+        return true;
+        
+    },
+
+    statusMessage: function(message, colour)
+    {
+      
+            const node = document.createElement("li");
+            node.style.color = colour;
+            const textnode = document.createTextNode(message);
+            node.appendChild(textnode);
+            document.getElementById("messaging").appendChild(node);
+
     },
     sendSMS(message)
     {
@@ -39,36 +75,55 @@ Monitor.prototype = {
         'Authorization': 'Basic ' + btoa(auth)
     },
         body: new URLSearchParams({
-            'To': '+15145855822',
+            'To': this.phone,
             'From': '+13609341552',
             'Body': message
             })
         });
     },
 
-    interpretResponse: function(data)
+   
+    updateMessage: function(status, colour)
     {
-        let status = data[0].etat;
-        console.log(status);    
-        this.updateMessage(status);   
-    },
-    updateMessage: function(status)
-    {
-        let title = document.getElementById('message');
-        
-
+        this.statusMessage("Checking location " +this.location+"...", "green");
         if (status == 'A')
         {
-            elMessage = "UP: All ok";
+            this.statusMessage("UP: All ok.", "green");
         }
         else
         {
-            elMessage = "DOWN: there is an issue.";
-            this.sendSMS(elMessage + ' check online https://infopannes-services.solutions.hydroquebec.com/web/api/v1/lieux-conso/etats/'+ this.location);
+            this.statusMessage("DOWN: There is a power outage.", "red");
+            this.prepSMS();
         }
-        console.log(elMessage);
-        title.innerHTML = elMessage;
+
+    },
+    statusMessage: function (message, colour) {
+        const node = document.createElement("li");
+        node.style.color = colour;
+        const textnode = document.createTextNode(message);
+        node.appendChild(textnode);
+        document.getElementById("messaging").appendChild(node);
+    },
+
+    prepSMS: function()
+    {
+        if (this.validateDigits(this.phone, 11) && this.account.length >= 34 && this.token.length >= 32)
+        {
+           this.statusMessage("Sending a SMS to:"+this.phone, "red");
+           this.sendSMS("There seems to be a power outage at the following address. Check online https://infopannes-services.solutions.hydroquebec.com/web/api/v1/lieux-conso/etats/"+ this.location);
+        }
+        else
+        {
+            this.statusMessage("Unable to send SMS to: "+this.phone+" - missing data from URL.", "red");
+        }
         
+    },
+    interpretResponse: function(data)
+    {
+        this.statusMessage("Success...", "green");
+        let status = data[0].etat;
+        console.log(status);    
+        this.updateMessage(status);   
     },
 
     getHyroAPI: function()
