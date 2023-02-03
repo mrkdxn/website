@@ -4,6 +4,11 @@
 window.addEventListener('load', function () {
     let hydroMonitor = new Monitor();
     hydroMonitor.init();
+    gtag('event', 'Page Loaded', {
+  'event_category': 'Hydro Monitor',
+  'event_label': 'Step 1',
+  'value': ''
+});
 
 });
 
