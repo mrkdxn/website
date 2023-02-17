@@ -1,0 +1,10 @@
+{
+    "require": {
+        "philo/laravel-blade": "^3.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
+    }
+}

@@ -1,0 +1,143 @@
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Cormorant Garamond', sans-serif;
+}
+
+html,
+body {
+	height: 100vh;
+	padding-top: 1vh;
+}
+
+body {
+	display: grid;
+	grid-template-rows: min-content auto min-content;
+}
+
+/* for beautification purpose */
+
+body {
+	text-align: center;
+}
+
+header,
+footer {
+	font-size: 1.5rem;
+}
+
+header,
+footer,
+div {
+	padding: 10px;
+}
+a {
+	text-decoration: none;
+	font-size: 20px;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+img {
+	height: 200px;
+	max-width: 250px;
+	padding: 10px;
+	flex: 1 auto;
+}
+
+.gallery {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+}
+h1 {
+	color: #333;
+	font-size: 2em;
+}
+h2 {
+	color: #4d4d4d;
+	font-size: 1em;
+}
+h3 {
+	font-size: 0.85em;
+}
+.first {
+	height: 180px;
+	max-width: 230px;
+	padding: 10px;
+	flex: 1 auto;
+	margin: 20px;
+	border: 1px solid #333;
+}
+.first > div {
+	background-color: #bfbfbf;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.first > div.about {
+	position: relative;
+	top: -158px;
+	right: 0px;
+	background-color: #000;
+	opacity: 0;
+	color: #fff;
+}
+.first > div.about:hover {
+	opacity: 1;
+}
+.first > div.about a {
+	color: #fff;
+}
+.container {
+	max-width: 800px;
+	width: 75%;
+	text-align: left;
+	margin: 0 auto;
+}
+
+
+.photo {
+	position: relative;
+	/*width: 50%;*/
+}
+
+/*.image {*/
+/*	display: block;*/
+/*	width: 100%;*/
+/*	height: auto;*/
+/*}*/
+
+.overlayDiv {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #333;
+}
+
+.photo:hover .overlayDiv {
+	opacity: 1;
+}
+
+.overlayText {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
