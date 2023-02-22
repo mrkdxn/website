@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
-    let fotos = new Photos();
-    fotos.init();
+    // let fotos = new Photos();
+    // fotos.init();
 });
 
 const Photos = function () {
@@ -59,8 +59,8 @@ Photos.prototype = {
         {
             this.addPhoto(photos[image]);
         }
-        var lightbox = new SimpleLightbox('.photo a', {  });
-        lazyLoadInstance.update();
+        // var lightbox = new SimpleLightbox('.photo a', {  });
+        // lazyLoadInstance.update();
     },
     checkFlickrTime: function()
     {

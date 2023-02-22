@@ -1,0 +1,15 @@
+@include('inc/header')
+
+
+	
+	<div id="container">
+		<section class="intro">
+			<img src="https://live.staticflickr.com/65535/52674894738_cc9e48379b.jpg" />
+
+			<p>I am an artist, builder and work as a web development manager from Montréal, Québec, Canada.</p>
+			<p>You can view my <a href="/paintings/">paintings</a>, my album showing work on our <a href="/chalet/">chalet build</a> or view my <a href="https://www.linkedin.com/in/mark-dixon-53b9b92/">Linkedin profile</a> for web development experience.</p>
+			<p style="color: grey;"><br>This site is under construction (February 2023).</p>
+		</section>
+	</div>
+
+@include('inc/footer')

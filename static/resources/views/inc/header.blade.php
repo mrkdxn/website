@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>{{ $title ?? 'Mark Dixon' }}</title>
+    <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -17,9 +18,12 @@
     <meta name="twitter:card" content="summary"/>
     <meta name="description" content="{{ $description ?? 'Mark Dixon'}}" />
 
-    <link rel='stylesheet' href='../css/main2.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='../css/simpleLightbox.css' type='text/css' media='all' />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='./css/main2.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='./css/simpleLightbox.css' type='text/css' media='all' />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
     
@@ -43,3 +47,11 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZC34FH"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<div id="header">
+    <section id="name"><h1><a href="/">MARK DIXON</a></h1></section>
+    <section id="nav">
+        <a href="/paintings/">PAINTINGS</a>
+        <a href="/chalet/">CHALET BUILD</a>
+        <a href="/">ABOUT</a>
+    </section>
+</div>

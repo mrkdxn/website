@@ -1,7 +1,8 @@
 {
-	"view" : "default",
+	"view" : "home",
 	"slug" : "/",
 	"title" : "Mark Dixon -  Homepage",
-	"h1" : "This is an H1",
+	"h1" : "Mark Dixon",
+	"h2" : "Montreal, Quebec, Canada",
 	"description" : "A website highlighting the paintings of canadian artist Mark Dixon. Mark is from Montreal, Quebec, Canada."
 }

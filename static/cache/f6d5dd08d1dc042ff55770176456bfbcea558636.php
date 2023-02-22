@@ -1,10 +1,9 @@
 <?php echo $__env->make('inc/header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
-	<h1><?php echo e($h1); ?></h1>
+	<h2><?php echo e($h1); ?></h2>
 	
 	
 <div class="gallery" id="photos">
-	<div id="album_container"></div>
      <?php 
 	$photos = $photoset;
 	$album= new Flickr($photos);
@@ -12,6 +11,9 @@
 </div>
 
 <script>
+	var lightbox = new SimpleLightbox('.photo a', {  });
+    //lazyLoadInstance.update();
+
     var lazyLoadInstance = new LazyLoad({
         // Your custom settings go here
     });

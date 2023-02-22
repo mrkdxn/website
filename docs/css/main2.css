@@ -3,13 +3,12 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: 'Cormorant Garamond', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 
 html,
 body {
 	height: 100vh;
-	padding-top: 1vh;
 }
 
 body {
@@ -21,6 +20,7 @@ body {
 
 body {
 	text-align: center;
+	padding-top: 0;
 }
 
 header,
@@ -35,35 +35,79 @@ div {
 }
 a {
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 1em;
 }
 a:hover {
 	text-decoration: underline;
 }
 
-img {
-	height: 200px;
-	max-width: 250px;
+.photos img {
+	height: 300px;
+/*	max-width: 250px;*/
 	padding: 10px;
 	flex: 1 auto;
 }
 
+h1 {
+	color: #333;
+	font-size: 1.5em;
+}
+h2 {
+	color: #4d4d4d;
+	font-size: 2em;
+}
+h3 {
+	font-size: 0.85em;
+}
+/* NAV */
+#header, #footer {
+	margin: 0 0 30px 10px;
+	background-color: #f6f3f3;
+	border-bottom: #e0e0e0 solid 1px;
+}
+#header h1 a, #header a, #footer a {
+	color: #000;
+}
+#name {
+	float: left;
+}
+#nav {
+	float: right;
+	margin-top: 6px;
+}
+#nav a {
+	padding-left: 15px;
+}
+#footer {
+	padding: 10px;
+	border-top: 1px solid #e0e0e0;
+}
+#footer a {
+	padding: 0 10px;
+}
+
+/* Home */
+
+#container .intro {
+	max-width: 500px;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    text-align: left;
+    margin: auto;
+}
+#container .intro img {
+	padding: 2vh 0 4vh 0;
+}
+#container .intro a {
+	color: #000;
+	text-decoration: underline;
+}
 .gallery {
 	display: flex;
 	flex-flow: row wrap;
 	align-items: center;
 	justify-content: center;
-}
-h1 {
-	color: #333;
-	font-size: 2em;
-}
-h2 {
-	color: #4d4d4d;
-	font-size: 1em;
-}
-h3 {
-	font-size: 0.85em;
+	width: 100vw;
 }
 .first {
 	height: 180px;
@@ -104,6 +148,7 @@ h3 {
 
 .photo {
 	position: relative;
+	padding: 25px;
 	/*width: 50%;*/
 }
 

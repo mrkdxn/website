@@ -1,7 +1,5 @@
 <?php
 
-
-
 class Flickr
 {
 	private $photoset;
