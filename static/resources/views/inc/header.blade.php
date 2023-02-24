@@ -2,15 +2,13 @@
 <html>
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5HKBQB601Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5HKBQB601Z');
-</script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5HKBQB601Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5HKBQB601Z');
+    </script>
 
     <title>{{ $title ?? 'Mark Dixon' }}</title>
     <base href="/">
@@ -38,10 +36,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
     
-
+    <script src="../js/simpleLightbox.js"></script>
+    <script src="../js/m.js"></script>
 </head>
 <body>
-
 <div id="header">
     <section id="name"><h1><a href="/">MARK DIXON</a></h1></section>
     <section id="nav">
