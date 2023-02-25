@@ -14,7 +14,7 @@ body.hidden-scroll {
     top: 0;
     bottom: 0;
     background: #fff;
-    opacity: 0.9;
+    opacity: 0.98;
     display: none;
     z-index: 1035; }
 
@@ -128,12 +128,12 @@ body.hidden-scroll {
         border: 0 none; } }
 .sl-wrapper .sl-image .sl-caption {
     display: none;
-    padding: 10px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.8);
-    font-size: 1rem;
-    position: absolute;
-    bottom: 0;
+    padding-top: 20px;
+    color: #000;
+/*    background: rgba(0, 0, 0, 0.8);*/
+    font-size: 0.8rem;
+    position: relative;
+/*    bottom: -20px;*/
     left: 0;
     right: 0; }
 .sl-wrapper .sl-image .sl-caption.pos-top {
