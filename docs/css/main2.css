@@ -58,7 +58,8 @@ h2 {
 	font-size: 2em;
 }
 h3 {
-	font-size: 0.85em;
+	font-size: 1.5em;
+	margin-bottom: 12px;
 }
 /* NAV ======================================== */
 #header, #footer {
@@ -256,3 +257,23 @@ Removes the underline with text decoration = none.*/
 	transform: translate(-50%, -50%);
 	text-align: center;
 }
+
+/* Blog archive */
+
+.blog-archive div {
+	clear: left;
+	text-align: left;
+	max-width: 750px;
+  margin: 0 auto 20px auto;
+}
+.blog-archive div p {
+	padding: 12px 0;
+}
+
+@media (max-width: 700px){
+	.blog-archive img
+	{
+		max-width: 100%;
+	}
+	img {max-width: 100%;}
+	}

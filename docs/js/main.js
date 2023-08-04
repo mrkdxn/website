@@ -10,3 +10,18 @@ function openDrawerMenu(){
     x.className = "navBar";
   }
 }
+
+window.addEventListener('load', function () {
+    lightbox.on('show.simplelightbox', function () {
+      console.log('show.simplelightbox...');
+  });
+    lightbox.on('change.simplelightbox', function () {
+      console.log('change.simplelightbox...');
+  });
+
+
+    
+});
+
+
+

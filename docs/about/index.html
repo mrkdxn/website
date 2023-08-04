@@ -52,6 +52,7 @@
          <a href="/"></a>
         <a href="/">HOME</a>
         <a href="/paintings/">PAINTINGS</a>
+        <a href="/blog-archive/">BLOG</a>
         <a href="/chalet/">CHALET BUILD</a>
         <a href="/">ABOUT</a>
       <a href="javascript:void(0);" class="icon" onClick="openDrawerMenu()">&#9776;</a>

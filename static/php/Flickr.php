@@ -40,7 +40,7 @@ class Flickr
     }
     private function printPhotos($url, $title)
     {
-    	echo '<div class="photo"><img title="' . $title . '" class="lazy entered loaded" data-src="' . $url . '_m.jpg" data-ll-status="loaded" src="' . $url . '_m.jpg">';
+    	echo '<div class="photo"><img title="' . $title . '" class="lazy" data-src="' . $url . '_m.jpg">';
     	echo '<div class="overlayDiv"><a href="' . $url . '_b.jpg" title="' . $title . '">';
     	echo '<div class="overlayText"><h3>' . $title . '</h3></div></a></div></div>';
 
