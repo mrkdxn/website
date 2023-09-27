@@ -49,13 +49,15 @@
     </section> -->
     <h1><a href="/">MARK DIXON</a></h1>
     <div class="navBar" id="mainNavBar">
-         <a href="/"></a>
-        <a href="/">HOME</a>
-        <a href="/paintings/">PAINTINGS</a>
-        <a href="/blog-archive/">BLOG</a>
-        <a href="/chalet/">CHALET BUILD</a>
-        <a href="/">ABOUT</a>
-      <a href="javascript:void(0);" class="icon" onClick="openDrawerMenu()">&#9776;</a>
+        <div class="navBarInside">
+            <a href="/"></a>
+            <a href="/">HOME</a>
+            <a href="/paintings/">PAINTINGS</a>
+            <a href="/blog-archive/">BLOG</a>
+            <a href="/chalet/">CHALET BUILD</a>
+            <a href="/">ABOUT</a>
+            <a href="javascript:void(0);" class="icon" onClick="openDrawerMenu()">&#9776;</a>
+        </div>
     </div>
 
 </div>

@@ -84,9 +84,10 @@ h3 {
 	padding-left: 15px;
 }
 .navBar{
-  float: right;
-  padding: 0;
-  margin-top: 4px;
+
+  position: absolute;
+    right: 5px;
+    top: -6px;
 }
 
 /* NAV BAR ======================================== */
@@ -130,6 +131,8 @@ Removes the underline with text decoration = none.*/
 /*The navBar class will be changed to 'navBar responsive' using JS. This chunk of CSS makes the menu icon stay where it is by making the position absolute within it's parent 'right top corner'. Without this, the icon will get kicked around when the items are collapsed and expanded*/
   .navBar.responsive {
     position: relative;
+    background-color: #ddd;
+ 
   }
   .navBar.responsive a.icon {
     position: absolute;
@@ -271,9 +274,18 @@ Removes the underline with text decoration = none.*/
 }
 
 @media (max-width: 700px){
+	body {
+		display: block;
+	}
+	#header {
+		min-height: 60px;
+	}
 	.blog-archive img
 	{
 		max-width: 100%;
+		height: auto;
 	}
+
 	img {max-width: 100%;}
+
 	}
