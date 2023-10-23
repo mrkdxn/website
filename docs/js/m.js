@@ -2,7 +2,7 @@ window.addEventListener('load', function () {
     // let fotos = new Photos();
     // fotos.init();
 });
-
+console.log("deployHQ");
 const Photos = function () {
 };
 
