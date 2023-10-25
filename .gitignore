@@ -3,3 +3,4 @@
 monitor/example-issue.json
 docs/insta.php
 .DS_Store
+static/keys/keys.php
