@@ -1,14 +1,71 @@
-// get data from https://mrkdxn.infinityfreeapp.com/insta.php?p=poisson and console.log it
 
-function getData(url) {
-    return fetch(url)
+window.addEventListener('load', function () {
+    let fotos = new Photos();
+    fotos.getInsta();
+    console.log(document.getElementById('post-list'));
+});
+
+const Photos = function () {
+};
+
+Photos.prototype = {
+  
+    getInsta: function()
+    {
+        let url = '/insta.php';
+        return fetch(url)
         .then((resp) => resp.json())
         .then(function(data) {
-            console.log(data);
+           // console.log(data);
+           // write code so that I can access the function parseData()
+
+            let fotos = new Photos();
+            fotos.parseData(data);
+        }).then(function() {
+            // lazy load images
+            var lazyLoadInstance = new LazyLoad({
+                // Your custom settings go here
+            });
         })
         .catch(function(error) {
             console.log(error);
         });
-}
+    },
+    parseData: function(data)
+    {
+        let images = data.data;
+        console.log(images);
 
-getData('https://mrkdxn.infinityfreeapp.com/insta.php?p=poisson');
+        for (var key in images) {
+            if (images.hasOwnProperty(key)) {
+               
+                // create a link element
+                let link = document.createElement('a');
+                link.setAttribute('href', images[key].permalink);
+                link.setAttribute('class', 'post');
+                link.setAttribute('target', '_blank');
+
+                // add a figure element to the link with the class name "post-image"
+                let figure = document.createElement('figure');
+                figure.setAttribute('class', 'post-image');
+                link.appendChild(figure);
+
+                // add an image element to the figure with the class name "lazy" and data-src set to "images[key].media_url"
+                let image = document.createElement('img');
+                image.setAttribute('class', 'lazy');
+                image.setAttribute('data-src', images[key].media_url);
+                figure.appendChild(image);
+                
+
+                // add link to the class "post-list"
+                document.getElementById('post-list').appendChild(link);
+                
+               
+            }
+        }
+
+        
+    }
+
+   
+}

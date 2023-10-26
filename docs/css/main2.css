@@ -289,3 +289,40 @@ Removes the underline with text decoration = none.*/
 	img {max-width: 100%;}
 
 	}
+
+
+
+
+/* Instagram feed */
+
+#post-list {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(100px, 293px));
+	justify-content: center;
+	grid-gap: 28px;
+	margin-top: 50px;
+  }
+  .post {
+	cursor: pointer;
+	position: relative;
+	display: block;
+  }
+  .post-image {
+	margin: 0;
+  }
+  .post-image img {
+	width: 100%;
+	vertical-align: top;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+	#post-list {
+	  grid-gap: 3px;
+	}
+  }
+
+  .instagram-logo {
+	width: 43px;
+    margin-bottom: -11px;
+}

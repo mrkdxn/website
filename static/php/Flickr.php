@@ -1,8 +1,10 @@
 <?php
+include_once('keys/keys.php');
 
 class Flickr
 {
 	private $photoset;
+    private $key = FLICKR;
 
 	function __construct($init_parameter) {
         $this->photoset = $init_parameter;
@@ -12,7 +14,7 @@ class Flickr
     private function flickrAPI()
     {
 
-    	$url = 'https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=2c45c27714bec652243d7e68e869506e&photoset_id=' . $this->photoset . '&user_id=80995589%40N00&extras=tags,description&format=json&nojsoncallback=1';
+    	$url = 'https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key='. $this->key. '&photoset_id=' . $this->photoset . '&user_id=80995589%40N00&extras=tags,description&format=json&nojsoncallback=1';
     	
 
     	$curl = curl_init();
