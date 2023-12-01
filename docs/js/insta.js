@@ -38,7 +38,8 @@ Photos.prototype = {
 
         for (var key in images) {
             if (images.hasOwnProperty(key)) {
-               
+                if (images[key].media_type != 'VIDEO')
+                {
                 // create a link element
                 let link = document.createElement('a');
                 link.setAttribute('href', images[key].permalink);
@@ -53,14 +54,16 @@ Photos.prototype = {
                 // add an image element to the figure with the class name "lazy" and data-src set to "images[key].media_url"
                 let image = document.createElement('img');
                 image.setAttribute('class', 'lazy');
+                
                 image.setAttribute('data-src', images[key].media_url);
+                
                 figure.appendChild(image);
                 
 
                 // add link to the class "post-list"
                 document.getElementById('post-list').appendChild(link);
                 
-               
+                }
             }
         }
 
