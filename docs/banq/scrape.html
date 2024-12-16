@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap Scraper</title>
+    <script defer src="sitescraper2.js"></script> <!-- Link to the updated JavaScript file -->
+</head>
+<body>
+    <h1>Extracteur de Plan du Site</h1>
+    <p>Cliquez sur le bouton ci-dessous pour récupérer, traiter le plan du site et extraire chaque URL.</p>
+    <p>Plan du Site: https://ntni.banq.qc.ca/cultural-item-sitemap.xml</p>
+    <p>Sélectionnez une limite pour la requête. Choisissez "Get all" pour obtenir toutes les URLs du plan du site - cela prendra beaucoup de temps car chaque URL sera requêtée une par seconde. Donc 700 URLs prendra ~12 minutes.</p>
+    <select id="url-limit">
+        <option value="x">Select limit</option>
+        <option value="25">Test (25)</option>
+        <option value="100">Dry run (100)</option>
+        <option value="2000">Get all</option>
+    </select>
+
+    <button id="fetch-sitemap">Récupérer et Extraire le Plan du Site</button>
+    <div id="sitemapURL"></div>
+    <ol id="sitemap-list"></ol> <!-- Placeholder for displaying results -->
+</body>
+</html>
