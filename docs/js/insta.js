@@ -35,6 +35,13 @@ Photos.prototype = {
     {
         let images = data.data;
         console.log(images);
+        // check if images is undefined
+        if (images == undefined) {
+            console.log('No images found');
+            // redirect to /paintings/ url
+            window.location.href = '/paintings/';
+        }
+       
 
         for (var key in images) {
             if (images.hasOwnProperty(key)) {
