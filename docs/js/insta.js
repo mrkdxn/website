@@ -29,7 +29,14 @@ Photos.prototype = {
         })
         .catch(function(error) {
             console.log(error);
+            // call the redirectToPaintings function
+            let fotos = new Photos();
+            fotos.redirectToPaintings();
         });
+    },
+    redirectToPaintings: function()
+    {
+        window.location.href = '/paintings/';
     },
     parseData: function(data)
     {
@@ -37,9 +44,10 @@ Photos.prototype = {
         console.log(images);
         // check if images is undefined
         if (images == undefined) {
+            
             console.log('No images found');
             // redirect to /paintings/ url
-            window.location.href = '/paintings/';
+            this.redirectToPaintings();
         }
        
 
