@@ -1,6 +1,6 @@
 <?php echo $__env->make('inc/header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
-	<h1><?php echo e($h1); ?></h1>
+	<h2><?php echo e($h1); ?></h2>
 
 	<p>This is not an artist’s statement.</p>
 

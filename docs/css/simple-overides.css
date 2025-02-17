@@ -1,0 +1,163 @@
+body {
+    grid-template-columns: 1fr min(55rem, 90%) 1fr;
+}
+
+header {
+    padding-bottom: 0rem !important;
+    background-color: #f1f1f1 !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+}
+header h1 {
+    font-size: 1.75rem;
+}
+header h1 a {
+    color: #333;
+    text-decoration: none;
+}
+header h1 a:visited {
+    color: #333;
+}
+header nav a {
+    border: 0;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+/* Instagram feed */
+
+#post-list {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(100px, 293px));
+	justify-content: center;
+	grid-gap: 28px;
+	margin-top: 50px;
+  }
+  .post {
+	cursor: pointer;
+	position: relative;
+	display: block;
+  }
+  .post-image {
+	margin: 0;
+  }
+  .post-image img {
+	width: 100%;
+	vertical-align: top;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+	#post-list {
+	  grid-gap: 3px;
+	}
+  }
+
+  .instagram-logo {
+	width: 43px;
+    margin-bottom: -11px;
+}
+
+
+/* Gallery [Flickr] */
+/* Home */
+
+
+.gallery {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	/* width: 100vw; */
+}
+.first {
+	height: 180px;
+	max-width: 230px;
+	padding: 10px;
+	flex: 1 auto;
+	margin: 20px;
+	border: 1px solid #333;
+}
+.first > div {
+	background-color: #bfbfbf;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.first > div.about {
+	position: relative;
+	top: -158px;
+	right: 0px;
+	background-color: #000;
+	opacity: 0;
+	color: #fff;
+}
+.first > div.about:hover {
+	opacity: 1;
+}
+.first > div.about a {
+	color: #fff;
+}
+.container {
+	max-width: 800px;
+	width: 75%;
+	text-align: left;
+	margin: 0 auto;
+}
+
+
+.photo {
+	position: relative;
+	padding: 25px;
+	/*width: 50%;*/
+}
+
+/*.image {*/
+/*	display: block;*/
+/*	width: 100%;*/
+/*	height: auto;*/
+/*}*/
+
+.overlayDiv {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #333;
+}
+
+.photo:hover .overlayDiv {
+	opacity: 1;
+}
+
+.overlayText {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.overlayText h3 {
+	font-size: 0.8em;
+}
+
+
+
+/* FOOTER */
+footer nav a {
+    padding: 0 0.5rem;
+}

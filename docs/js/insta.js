@@ -1,5 +1,5 @@
 
-window.addEventListener('load', function () {
+window.addEventListener('DOMContentLoaded', function () {
     let fotos = new Photos();
     fotos.getInsta();
     console.log(document.getElementById('post-list'));
@@ -18,7 +18,7 @@ Photos.prototype = {
         .then(function(data) {
            // console.log(data);
            // write code so that I can access the function parseData()
-
+console.log(data);
             let fotos = new Photos();
             fotos.parseData(data);
         }).then(function() {
@@ -31,7 +31,7 @@ Photos.prototype = {
             console.log(error);
             // call the redirectToPaintings function
             let fotos = new Photos();
-            fotos.redirectToPaintings();
+            //fotos.redirectToPaintings();
         });
     },
     redirectToPaintings: function()

@@ -27,8 +27,8 @@
     <meta name="twitter:card" content="summary"/>
     <meta name="description" content="{{ $description ?? 'Mark Dixon'}}" />
 
-    <link rel='stylesheet' href='./css/main2.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='./css/simpleLightbox.css' type='text/css' media='all' />
+    <!-- <link rel='stylesheet' href='./css/main2.css' type='text/css' media='all' /> -->
+    
     <!-- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,28 +38,19 @@
     
     <script src="../js/simpleLightbox.js"></script>
     <script src="../js/main.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+    <link rel='stylesheet' href='./css/simple-overides.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='./css/simpleLightbox.css' type='text/css' media='all' />
+
 </head>
 <body>
-<div id="header">
-    <!-- <section id="name"><h1><a href="/">MARK DIXON</a></h1></section>
-    <section id="nav">
-        <a href="/paintings/">PAINTINGS</a>
-        <a href="/chalet/">CHALET BUILD</a>
-        <a href="/">ABOUT</a>
-    </section> -->
-    <h1><a href="/">MARK DIXON</a></h1>
-    <div class="navBar" id="mainNavBar">
-        <div class="navBarInside">
-            <a href="/"></a>
-            <a href="/">HOME</a>
+    <header>
+        <h1><a href="/">Mark Dixon</a></h1>
+        <nav>
             <a href="/paintings/">PAINTINGS</a>
             <a href="/blog-archive/">BLOG</a>
-            <a href="/chalet/">CHALET BUILD</a>
-            <a href="/">ABOUT</a>
-            <a href="javascript:void(0);" class="icon" onClick="openDrawerMenu()">&#9776;</a>
-        </div>
-    </div>
-
-</div>
-
+            <a href="/about/">ABOUT</a>
+        </nav>
+    </header>
 
