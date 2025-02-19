@@ -1,8 +1,13 @@
 @include('inc/header')
 
-	<h2>{{ $h1 }}</h2>
 	
 	
+<main>
+<h2>{{ $h1 }}</h2>
+@isset($intro)
+    <p>{{ $intro }}</p>
+@endisset
+
 <div class="gallery" id="photos">
      <?php 
 	$photos = $photoset;
@@ -18,5 +23,6 @@
         // Your custom settings go here
     });
 </script>
+</main>
 
 @include('inc/footer')
