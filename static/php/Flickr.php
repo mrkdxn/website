@@ -16,7 +16,6 @@ class Flickr
 
     	$url = 'https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key='. $this->key. '&photoset_id=' . $this->photoset . '&user_id=80995589%40N00&extras=tags,description&format=json&nojsoncallback=1';
     	
-
     	$curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
